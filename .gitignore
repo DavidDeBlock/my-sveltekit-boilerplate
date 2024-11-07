@@ -1,0 +1,61 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# SvelteKit
+/.svelte-kit
+/build
+/package
+
+# Database
+*.db
+*.db-journal
+/drizzle
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Build output
+/build
+/.vercel
+/.output
+/dist
+
+# Storybook
+/storybook-static
+
+# Keep static directory but ignore its contents
+/static/*
+!/static/.gitkeep
+
+# TypeScript
+*.tsbuildinfo
+
+# Cache
+.cache
+.temp
