@@ -2,8 +2,11 @@
 <script lang="ts">
     import { enhance } from '$app/forms';
     import { browser } from '$app/environment';
+    
 
     let { user } = $props<{ user: { username: string } | null }>();
+     
+
 
     function toggleMode() {
         if (!browser) return;
@@ -18,8 +21,9 @@
         <span class="text-2xl font-bold">Logo</span>
         <nav class="flex items-center gap-4">
             <a href="/" class="btn variant-ghost">Home</a>
-            <a href="/features/profile" class="btn variant-ghost">Profile</a>
-            
+            <a href="/todos" class="btn variant-ghost">Todos</a>
+            <a href="/profile" class="btn variant-ghost">Profile</a>
+           
             {#if user}
                 <form 
                     action="/?/logout" 
@@ -38,7 +42,7 @@
                 </form>           
             {/if}
         
-            <button class="btn variant-ghost" on:click={toggleMode}>
+            <button class="btn variant-ghost" onclick={toggleMode}>
                 🌗
             </button>            
         </nav>
