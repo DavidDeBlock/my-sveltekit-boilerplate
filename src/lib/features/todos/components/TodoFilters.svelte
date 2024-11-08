@@ -4,7 +4,7 @@
     import type { TodoFilter } from '../stores/todoStore';
   
     const filters: TodoFilter[] = ['all', 'active', 'completed'];
-    $: activeFilter = $todoStore.filter;
+    const activeFilter = $todoStore.filter;
   </script>
   
   <div class="flex justify-center gap-2 my-4">
@@ -13,7 +13,7 @@
         class="btn"
         class:variant-filled-primary={activeFilter === filter}
         class:variant-ghost={activeFilter !== filter}
-        on:click={() => todoStore.setFilter(filter)}
+        onclick={() => todoStore.setFilter(filter)}
       >
         {filter.charAt(0).toUpperCase() + filter.slice(1)}
       </button>
